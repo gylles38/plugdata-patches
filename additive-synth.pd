@@ -48,7 +48,7 @@
 #N canvas 0 50 450 300 vcf 1;
 #X obj 9 0 cnv 15 151 153 empty empty Vcf 50 12 0 14 #000000 #e05200 0;
 #X floatatom 79 79 4 0 1 2 Res. - - 12;
-#X obj 29 31 hradio 20 1 0 4 empty empty empty 0 -8 0 10 #191919 #e1e1e1 #e1e1e1 0;
+#X obj 29 31 hradio 20 1 1 4 empty empty empty 0 -8 0 10 #191919 #e1e1e1 #e1e1e1 0;
 #X obj 146 198 route 0 1 2 3, f 25;
 #X msg 56 318 1 0 0 0, f 11;
 #X msg 147 318 0 1 0 0;
@@ -63,15 +63,15 @@
 #X obj 612 481 *~ 0;
 #X obj 518 610 outlet~ Output;
 #X obj 375 52 inlet~ Input;
-#X text 9 133 Output;
-#X text 123 -1 Input;
+#X text 9 132 Output;
+#X text 123 -2 Input;
 #X msg 363 241 Lowpass;
 #X msg 452 241 Highpass;
 #X msg 549 241 Bandpass;
 #X msg 648 241 Notch;
 #X obj 29 108 display;
 #X obj 256 71 inlet Cutoff;
-#X text 9 -1 Cutoff;
+#X text 9 -2 Cutoff;
 #X connect 1 0 10 2;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
@@ -108,7 +108,7 @@
 #X coords 0 0 1 1 152 154 2 7 0;
 #X restore 689 605 pd vcf;
 #X obj 660 550 gate~ 2;
-#X obj 654 430 hradio 31 1 0 2 empty empty Direct\ Vcf 0 -8 0 12 #191919 #e1e1e1 #e14200 0;
+#X obj 654 430 hradio 31 1 1 2 empty empty Direct\ Vcf 0 -8 0 12 #191919 #e1e1e1 #e14200 1;
 #X obj 670 506 + 1;
 #X obj 214 777 vsl 20 100 0 1 0 0 empty empty empty 0 -9 0 10 #191919 #e1e1e1 #e1e1e1 0 1;
 #X obj 69 792 rms~;
@@ -194,4 +194,5 @@
 #X connect 59 0 60 1;
 #X connect 60 0 61 0;
 #X connect 61 0 44 0;
+#X connect 61 0 45 0;
 #X coords 0 0 1 1 200 140 0;

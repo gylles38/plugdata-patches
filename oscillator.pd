@@ -29,6 +29,10 @@
 #X text 55 95 Vol., f 12;
 #X text 13 168 Output;
 #X text 13 2 Input;
+#X obj 459 80 loadbang;
+#X msg 396 168 0.5, f 21;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
 #X coords 0 0 1 1 339 188 1 0 0;
 #X restore 81 231 pd panel;
 #X obj 925 486 r \$0-waveForm;
