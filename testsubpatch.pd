@@ -1,0 +1,4 @@
+#N canvas 101 74 439 458 (subpatch) 1;
+#X obj 225 369 knob 50 50 10000 4 50 \cutoffXXX \$0-set-cutoff #e4e4e4 #a8a8a8 #4d4d4d 0 0 0 0 1 270 0 0 50;
+#X floatatom 320 369 7 0 0 0 - \cutoffXXX \$0-cutoff-number 0;
+#X coords 0 1 100 -1 479 93 1 111 328;

@@ -1,0 +1,4 @@
+#N canvas 827 239 527 327 12;
+#X obj 222 155 dac~;
+#X obj 190 81 palette/bass.m~;
+#X connect 1 0 0 0;

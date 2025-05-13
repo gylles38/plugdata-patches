@@ -1,0 +1,31 @@
+from pathlib import Path
+
+# Patch PlugData pour envoyer une note MIDI (note 60) avec vélocité 100/0 via toggle
+pd_midi_note_patch = """
+#N canvas 100 100 600 400 10;
+#X obj 100 100 toggle;
+#X obj 100 140 select 1;
+#X msg 100 180 100;
+#X obj 100 220 pack 60 0;
+#X obj 100 260 noteout;
+
+#X obj 200 140 select 0;
+#X msg 200 180 0;
+#X obj 200 220 pack 60 0;
+
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 1;
+#X connect 7 0 4 0;
+"""
+
+# Save the .pd file
+patch_path_midi = Path("/mnt/data/midi_note_toggle.pd")
+patch_path_midi.write_text(pd_midi_note_patch)
+
+# Return the filename
+patch_path_midi.name
